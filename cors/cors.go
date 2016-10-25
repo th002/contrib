@@ -119,7 +119,7 @@ func New(config Config) gin.HandlerFunc {
 			}
 			return
 		}
-		c.Header("Access-Control-Allow-Origin", origin)
+		c.Writer.Header().Set("Access-Control-Allow-Origin", origin)
 	}
 }
 
